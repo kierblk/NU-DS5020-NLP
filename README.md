@@ -1,4 +1,4 @@
-# Northeastern University, Spring 2023: Data Science 5020
+# Northeastern University, Spring 2023: DS 5020
 ## Simple Language Model using N-grams
 
 Natural Language Processing (NLP) is a field of data science/AI that involves analyzing text and language data. This assignment aims to create a simple language model and gain insights into the application of probability to text data. The main objective is to load and tokenize the Berkeley Restaurant dataset, introduced in the “Speech and Language Processing'' book by Jurafsky. The following are the main steps involved in the assignment:
