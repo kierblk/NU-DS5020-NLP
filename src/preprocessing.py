@@ -2,7 +2,7 @@ import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
 
 # read in the dataset
-with open("data/berkeley_restaurant_dataset.txt", "r") as file:
+with open("../data/berkeley_restaurant_dataset.txt", "r") as file:
     raw_text = file.read()
 
 # tokenizer
@@ -12,8 +12,10 @@ nltk.download("punkt")
 sentences = sent_tokenize(raw_text)
 
 # for testing
+print("\n------ raw data - start------\n")
 for i in range(5):
     print(sentences[i])
+print("\n------ raw data - end------\n")
 
 # provided disfluencies
 disfluencies = ["uh", "uhm"]
@@ -32,5 +34,7 @@ for tokens in filtered_sentences:
     tokens.insert(0, start_token)
 
 # for testing
+print("\n------ processed data - start------\n")
 for i in range(5):
     print(filtered_sentences[i])
+print("\n------ processed data - end------\n")
