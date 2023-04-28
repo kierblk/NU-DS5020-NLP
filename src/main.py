@@ -31,6 +31,10 @@ def main():
     print("Bigrams:", bigrams[:10])
     print("Trigrams:", trigrams[:10])
 
+    # Print the requested statistics on word count, vocabulary size,
+    # and total number of sentences
+    ngrams.print_statistics()
+
 
 if __name__ == "__main__":
     main()
