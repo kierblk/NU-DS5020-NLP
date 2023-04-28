@@ -22,11 +22,21 @@ class Preprocessing:
 
     def tokenize_sentences(self):
         self.sentences = sent_tokenize(self.raw_text)
-        # # for testing
-        print("\n------ raw data - start------\n")
+        # Print Raw Data
+        print("""
+        PART 1
+        ------
+        
+        Load and preprocess the dataset provided:
+        - Tokenize the text, keeping only actual words while removing disfluencies such as “uh” 
+        and “uhm”
+        - Add special tokens to indicate the beginning of each sentence 
+        
+        """)
+        print("\n------ Sampled Raw Data - START------\n")
         for i in range(5):
             print(self.sentences[i])
-        print("\n------ raw data - end------\n")
+        print("\n------ END ------\n")
 
     def tokenize_words(self):
         self.filtered_sentences = [word_tokenize(sentence) for sentence in self.sentences]
@@ -48,11 +58,11 @@ class Preprocessing:
     def add_start_tokens(self, start_token):
         for sentence in self.filtered_sentences:
             sentence.insert(0, start_token)
-        # for testing
-        print("\n------ processed data - start------\n")
+
+        print("\n------ Sampled Processed Data - START------\n")
         for i in range(5):
             print(self.filtered_sentences[i])
-        print("\n------ processed data - end------\n")
+        print("\n------ END ------\n")
 
     def preprocess(self, start_token="</s>"):
         nltk.download("punkt")

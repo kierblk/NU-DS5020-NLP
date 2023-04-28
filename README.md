@@ -5,17 +5,17 @@ Natural Language Processing (NLP) is a field of data science/AI that involves an
 
 ## Steps
 
-1. Load and preprocess the dataset provided. Tokenize the text and keep only actual words while removing disfluencies such as “uh” and “uhm”. Add special tokens to indicate the beginning of each sentence (e.g., </s>).
-
-2. Count the words and report the size of the vocabulary. Also, report the number of sentences in the dataset.
-
-3. Read the chapter on N-grams and generate figures 4.1 and 4.2 for bigram counts. The figures do not have to be exact.
-
-4. Calculate the joint probability for at least five sentences (with vocabulary in the dataset) using bigrams.
-
-5. Repeat step 2 using trigrams. Observe if the estimates have changed.
-
-6. Submit the code or pdf of the program and output. The program should be able to run.
+- [x] Load and preprocess the dataset provided. Tokenize the text and keep 
+   only actual words while removing disfluencies such as “uh” and “uhm”. Add special tokens to indicate the beginning of each sentence (e.g., `</s>`).
+- [x] Count the words and report the size of the vocabulary. Also, report the 
+  number of sentences in the dataset.
+- [x] Read the chapter on N-grams and generate figures 4.1 and 4.2 for bigram 
+  counts. The figures do not have to be exact. 
+- [ ] Calculate the joint probability for at least five sentences (with 
+  vocabulary in the dataset) using bigrams. 
+- [ ] Repeat step 2 using trigrams. Observe if the estimates have changed. 
+- [ ] Submit the code or pdf of the program and output. The program should be 
+  able to run.
 
 ## Tools
 

@@ -26,14 +26,30 @@ def main():
     bigrams = ngrams.bigrams
     trigrams = ngrams.trigrams
 
-    # Print some example ngrams
-    print("Unigrams:", unigrams[:10])
-    print("Bigrams:", bigrams[:10])
-    print("Trigrams:", trigrams[:10])
+    # For testing - Print some example ngrams
+    # print("Unigrams:", unigrams[:10])
+    # print("Bigrams:", bigrams[:10])
+    # print("Trigrams:", trigrams[:10])
 
     # Print the requested statistics on word count, vocabulary size,
     # and total number of sentences
     ngrams.print_statistics()
+
+    print("""
+
+        PART 3
+        ------
+
+        Read the chapter on N-grams and generate figures 4.1 and 4.2 
+        for bigram 
+        counts. The figures do not have to be exact.
+
+        """)
+    print("------ Bigram Count Table - Figure 4.1 -------\n")
+    ngrams.bigram_count_table()
+
+    print("\n------ Bigram Probability Table - Figure 4.2 -------\n")
+    ngrams.bigram_probability_table()
 
 
 if __name__ == "__main__":
