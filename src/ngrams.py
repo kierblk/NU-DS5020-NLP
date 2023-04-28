@@ -2,18 +2,16 @@ import nltk
 
 
 class NGrams:
-    def __init__(self, preprocessed_data, start_token="</s>"):
+    def __init__(self, preprocessed_data):
         self.preprocessed_data = preprocessed_data
-        self.start_token = start_token
         self.unigrams = []
         self.bigrams = []
         self.trigrams = []
 
     def generate_unigrams(self):
         for sentence in self.preprocessed_data:
-            for token in sentence:
-                if token != self.start_token:
-                    self.unigrams.append(token)
+            for token in sentence[1:]:  # Start from the second token
+                self.unigrams.append(token)
 
     def generate_bigrams(self):
         for sentence in self.preprocessed_data:
