@@ -1,4 +1,5 @@
 from preprocessing import Preprocessing
+from ngrams import NGrams
 
 
 def main():
@@ -12,9 +13,23 @@ def main():
     data.preprocess()
 
     # Grab the preprocessed sentences to print them
-    preprocessed_sentences = data.filtered_sentences
-    for i in range(5):
-        print(preprocessed_sentences[i])
+    preprocessed_data = data.filtered_sentences
+
+    # Create an instance of the NGrams class with the preprocessed data
+    ngrams = NGrams(preprocessed_data)
+
+    # Generate unigrams, bigrams, and trigrams
+    ngrams.generate_ngrams()
+
+    # Access the generated ngrams
+    unigrams = ngrams.unigrams
+    bigrams = ngrams.bigrams
+    trigrams = ngrams.trigrams
+
+    # Print some example ngrams
+    print("Unigrams:", unigrams[:10])
+    print("Bigrams:", bigrams[:10])
+    print("Trigrams:", trigrams[:10])
 
 
 if __name__ == "__main__":
