@@ -5,16 +5,14 @@ def main():
     # Set the dataset path
     dataset_path = "../data/berkeley_restaurant_dataset.txt"
 
-    # Create an instance of the Clean class with the dataset path
+    # Create an instance of the Preprocessing class with the dataset path
     data = Preprocessing(dataset_path)
 
     # Preprocess the dataset
     data.preprocess()
 
-    # Access the preprocessed sentences
+    # Grab the preprocessed sentences to print them
     preprocessed_sentences = data.filtered_sentences
-
-    # Print the first few preprocessed sentences
     for i in range(5):
         print(preprocessed_sentences[i])
 
