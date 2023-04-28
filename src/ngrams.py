@@ -1,7 +1,5 @@
 import nltk
 
-import nltk
-from collections import Counter
 
 class NGrams:
     def __init__(self, preprocessed_data):
