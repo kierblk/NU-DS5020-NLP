@@ -44,15 +44,15 @@ class Preprocessing:
                 if token.lower() not in self.disfluencies
                 and not self.contains_non_alpha_chars(token)
             ]
+
+    def add_start_tokens(self, start_token):
+        for sentence in self.filtered_sentences:
+            sentence.insert(0, start_token)
         # for testing
         print("\n------ processed data - start------\n")
         for i in range(5):
             print(self.filtered_sentences[i])
         print("\n------ processed data - end------\n")
-
-    def add_start_tokens(self, start_token):
-        for sentence in self.filtered_sentences:
-            sentence.insert(0, start_token)
 
     def preprocess(self, start_token="</s>"):
         nltk.download("punkt")
