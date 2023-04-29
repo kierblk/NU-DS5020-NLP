@@ -1,5 +1,7 @@
 from preprocessing import Preprocessing
 from ngrams import NGrams
+from probability import Probability
+from random import shuffle
 
 
 def main():
@@ -50,6 +52,36 @@ def main():
 
     print("\n------ Bigram Probability Table - Figure 4.2 -------\n")
     ngrams.bigram_probability_table()
+
+    print("""
+
+        PART 4 & 5
+        ------
+
+        Calculate the joint probability for at least five sentences (with vocabulary in the dataset) using bigrams. 
+        Repeat step 2 using trigrams. Observe if the estimates have changed. 
+
+    """)
+    print("\n------ Calculate bigram and trigram probabilities --------\n")
+
+    probability = Probability(ngrams.bigrams, ngrams.trigrams)
+    bigram_probs = probability.bigram_probabilities()
+    trigram_probs = probability.trigram_probabilities()
+
+    sentences = data.filtered_sentences
+
+    shuffle(sentences)
+    examples = []
+    for sentence in sentences:
+        if len(sentence[1:]) > 2:
+            examples.append(sentence)
+
+    for sentence in examples[:5]:
+        if len(sentence[1:]) > 2:
+            print(f"Sentence: {' '.join(sentence[1:])}")
+            print(f"Bigram Probability: {bigram_probs[(sentence[1], sentence[2])]}")
+            print(f"Trigram Probability: {trigram_probs[(sentence[1], sentence[2], sentence[3])]}")
+            print()
 
 
 if __name__ == "__main__":

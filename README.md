@@ -11,10 +11,10 @@ Natural Language Processing (NLP) is a field of data science/AI that involves an
   number of sentences in the dataset.
 - [x] Read the chapter on N-grams and generate figures 4.1 and 4.2 for bigram 
   counts. The figures do not have to be exact. 
-- [ ] Calculate the joint probability for at least five sentences (with 
+- [x] Calculate the joint probability for at least five sentences (with 
   vocabulary in the dataset) using bigrams. 
-- [ ] Repeat step 2 using trigrams. Observe if the estimates have changed. 
-- [ ] Submit the code or pdf of the program and output. The program should be 
+- [x] Repeat step 2 using trigrams. Observe if the estimates have changed. 
+- [x] Submit the code or pdf of the program and output. The program should be 
   able to run.
 
 ## Tools
